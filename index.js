@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 const express = require("express");
 const formidable = require("express-formidable");
 //const cors = require("cors");
@@ -6,11 +6,11 @@ const app = express();
 //app.use(cors());
 app.use(formidable());
 
-/* MAILGUN CONFIGURATION */
-const api_key = process.env.MAILGUN_API_KEY; /* VOTRE CLÉ API */
-const domain = process.env.MAILGUN_DOMAIN; /* VOTRE DOMAINE SANDBOX */
+// /* MAILGUN CONFIGURATION */
+// const api_key = process.env.MAILGUN_API_KEY; /* VOTRE CLÉ API */
+// const domain = process.env.MAILGUN_DOMAIN; /* VOTRE DOMAINE SANDBOX */
 
-const mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+// const mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
 
 app.get("/", (req, res) => {
   res.send("server is up");
